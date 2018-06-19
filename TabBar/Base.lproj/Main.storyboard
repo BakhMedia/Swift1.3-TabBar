@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gCL-Md-1kq">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Настройки-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TabBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ночной режим" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJH-HK-Yj1">
+                                <rect key="frame" x="8" y="303" width="367" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="qUX-CO-YIM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oAe-gN-LMl">
+                                <rect key="frame" x="310" y="303.5" width="51" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="511-U9-asn"/>
+                                    <constraint firstAttribute="width" constant="49" id="5gQ-QJ-DVQ"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="colorChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="4HH-2F-2KJ"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oAe-gN-LMl" secondAttribute="trailing" constant="16" id="He4-Ge-Vgl"/>
+                            <constraint firstItem="WJH-HK-Yj1" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="RXa-yw-V5m"/>
+                            <constraint firstItem="WJH-HK-Yj1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="nVN-dh-8dR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WJH-HK-Yj1" secondAttribute="trailing" id="xJR-Wk-ln7"/>
+                            <constraint firstItem="oAe-gN-LMl" firstAttribute="centerY" secondItem="WJH-HK-Yj1" secondAttribute="centerY" id="zL4-Ma-qe6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Настройки" image="settings.png" id="95B-Kc-oTJ"/>
+                    <connections>
+                        <outlet property="background" destination="8bC-Xf-vdC" id="JuQ-hA-jby"/>
+                        <outlet property="label" destination="WJH-HK-Yj1" id="pee-1Q-fjH"/>
+                        <outlet property="switcher" destination="oAe-gN-LMl" id="z6N-gM-x8p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="782" y="243"/>
+        </scene>
+        <!--Инфо-->
+        <scene sceneID="sc9-DI-bAP">
+            <objects>
+                <viewController id="ecq-nx-pqb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P0B-c1-Fs1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Здесь будет информация" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g09-kf-KvU">
+                                <rect key="frame" x="0.0" y="323" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="g09-kf-KvU" firstAttribute="leading" secondItem="lgW-mM-K53" secondAttribute="leading" id="4It-xr-jpt"/>
+                            <constraint firstItem="lgW-mM-K53" firstAttribute="trailing" secondItem="g09-kf-KvU" secondAttribute="trailing" id="QHY-rw-DMJ"/>
+                            <constraint firstItem="g09-kf-KvU" firstAttribute="centerY" secondItem="P0B-c1-Fs1" secondAttribute="centerY" id="jnW-gD-Hxi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lgW-mM-K53"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Инфо" image="info.png" id="VMg-xk-71D"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iyA-B6-wkh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="782" y="-1085"/>
+        </scene>
+        <!--Чат-->
+        <scene sceneID="kY2-aE-XtS">
+            <objects>
+                <viewController id="OLJ-Zh-a4a" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bmo-cl-aHF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Здесь будет чат" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fW-4e-49S">
+                                <rect key="frame" x="0.0" y="323" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9fW-4e-49S" firstAttribute="leading" secondItem="JUg-eM-08Z" secondAttribute="leading" id="J1s-Qr-Urc"/>
+                            <constraint firstItem="9fW-4e-49S" firstAttribute="centerY" secondItem="bmo-cl-aHF" secondAttribute="centerY" id="WrY-uj-dd2"/>
+                            <constraint firstItem="9fW-4e-49S" firstAttribute="centerX" secondItem="bmo-cl-aHF" secondAttribute="centerX" id="g1Q-1l-4gU"/>
+                            <constraint firstItem="JUg-eM-08Z" firstAttribute="trailing" secondItem="9fW-4e-49S" secondAttribute="trailing" id="k3C-fV-zOO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JUg-eM-08Z"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Чат" image="chat.png" id="3dV-rS-5CN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zkw-63-E47" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="782" y="-424"/>
+        </scene>
+        <!--Лента-->
+        <scene sceneID="4nD-yo-Une">
+            <objects>
+                <viewController id="uub-Hx-ThE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HgG-Yv-1IU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Здесь будет лента" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Gn-MM-RvO">
+                                <rect key="frame" x="0.0" y="323" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fnD-Dv-dLe" firstAttribute="trailing" secondItem="2Gn-MM-RvO" secondAttribute="trailing" id="0Er-XQ-IHY"/>
+                            <constraint firstItem="2Gn-MM-RvO" firstAttribute="leading" secondItem="fnD-Dv-dLe" secondAttribute="leading" id="6n2-ci-LsX"/>
+                            <constraint firstItem="2Gn-MM-RvO" firstAttribute="centerY" secondItem="HgG-Yv-1IU" secondAttribute="centerY" id="fwZ-7U-Fj1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fnD-Dv-dLe"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Лента" image="feed.png" id="reb-mS-bdH">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hJ5-Yp-gf7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="782" y="-1752"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="60A-HI-1gV">
+            <objects>
+                <tabBarController id="gCL-Md-1kq" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FhB-D6-ZmO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="uub-Hx-ThE" kind="relationship" relationship="viewControllers" id="KhW-YE-VoA"/>
+                        <segue destination="ecq-nx-pqb" kind="relationship" relationship="viewControllers" id="rlJ-J0-fxR"/>
+                        <segue destination="OLJ-Zh-a4a" kind="relationship" relationship="viewControllers" id="CSL-FS-TXe"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="lCv-m9-gh9"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fdZ-f9-voK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1692" y="242"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chat.png" width="36" height="36"/>
+        <image name="feed.png" width="36" height="36"/>
+        <image name="info.png" width="36" height="36"/>
+        <image name="settings.png" width="36" height="36"/>
+    </resources>
+</document>
